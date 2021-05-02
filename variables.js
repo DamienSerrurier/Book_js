@@ -1,3 +1,4 @@
+// Les variables
 let integer = 25; // nombre entier
 let real = 2.5; // nombre réel positif ou négatif
 let string = 'Salut les gens'; // chaine de caractère
