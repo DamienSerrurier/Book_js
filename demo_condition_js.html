@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <script>
+        //Les conditions
+        // Objet marc avec ses propriétées
+        let marc = {
+            non: 'Marc',
+            age: 18,
+            moyenne: 12
+        };
+
+        // if, else if et else
+        if (marc.age >= 18) {
+            console.log('Tu peux passer le permis');
+        } else if (marc.age >= 15) {
+            console.log('Tu peux passer la conduite accompagnée');
+        } else {
+            console.log('Tu ne peux pas conduire');
+        }
+
+        /*
+        SI age >= 18 ALORS 
+            Tu peux conduire
+        SINON SI age >= 15 
+            Tu peux passer la conduite accompagnée
+        SINON 
+            Tu ne peux pas conduire
+        */
+
+        if (marc.age >= 18 && marc.age <= 25) {
+            console.log('Bravo! Tu as le droit au tarif jeune');
+        } else {
+            console.log('Vous n\'avez pas accès au tarif jeune');
+        }
+
+        if (marc.age < 18 || marc.age > 25) {
+            console.log('Vous n\'avez pas accès au tarif jeune');
+        } else {
+            console.log('Bravo! Tu as le droit au tarif jeune');
+        }
+
+        /*
+        ET : && (prioritaire)
+        OU : ||
+        SI age >= 18 ET age <= 25 ALORS
+            Bravo! Tu as le droit au tarif jeune
+        */
+
+        if (marc.age >= 18 && marc.age <= 25 || marc.age > 70) {
+            console.log('Vous avez accès au tarif réduit');
+        } else {
+            console.log('Vous n\'avez pas accès au tarif réduit');
+        }
+
+        if ((marc.age < 18 || marc.age > 25) && marc.age <= 70) {
+            console.log('Vous n\'avez pas accès au tarif réduit');
+        } else {
+            console.log('Vous avez accès au tarif réduit');
+        }
+
+        if (marc.age == 18) {
+            console.log('Bravo tu as 18 ans');
+        }
+
+        if (marc.age === 18) { // test la valeur et le type de donnée
+            console.log('Bravo tu as 18 ans');
+        }
+
+        /*
+        if (marc.age === 18) {
+            console.log('Bravo tu as 18 ans');
+        } else if (marc.age === 25) {
+            console.log('Bravo tu as un quart de siècle');
+        }else if (marc.age === 50) {
+            console.log('Bravo tu as un demi siècle');
+        */
+
+        //switch
+        switch (marc.age) {
+            case 18:
+                console.log('Bravo tu as 18 ans');
+                break
+            case 25:
+                console.log('Bravo tu as un quart de siècle');
+                break
+            case 50:
+                console.log('Bravo tu as un demi siècle');
+                break
+            default:
+                console.log('Bonne anniversaire');
+        }
+
+        //Ternaire
+        console.log(marc.age >= 18 ? 'Tu es majeur' : 'Tu es mineur');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
