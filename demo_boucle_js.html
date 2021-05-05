@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <script>
+        // Les boucles
+        // Boucle while (tant que)
+        i = 0;
+        while (i < 11) {
+            console.log(i);
+            i++ // = i += 1 ou i = i + 1
+        }
+
+        //Boucle while stopée avec un break
+        /*
+        TANT QUE condition EST VRAI ALORS
+        while (i < 11) {
+            console.log(i);
+            if (i == 3) {
+                break;
+            }
+            i = i + 1;   
+        }
+        console.log('Salut!');
+        */
+
+        //Boucle for (pour)
+        let eleves = ['Jean', 'Marc', 'Marion', 'Antoine'];
+
+        for (j = 0; j < eleves.length; j++) { // length = longueur (longueur du tableau eleves)
+            let eleve = eleves[j];
+            console.log('Bonjour ' + eleve);
+        }
+
+        /*
+        //Boucle parcourant le tableau mais en sens inverse
+         for (t = eleves.length - 1; t >= 0; t--) {
+            let eleve = eleves[t];
+            console.log('Bonjour ' + eleve);
+        }
+
+        for (j = 0; j < 11; j++) {
+            console.log(j);
+        }
+        */
+        //test nombre premier
+        let nombre = 31;
+        let estPremier = true;
+
+        for (k = 2; k < nombre; k++) {
+            if (nombre % k === 0) {
+                estPremier = false;
+                console.log('Ce nombre n\'est pas premier');
+                console.log(nombre + ' est divisible par ' + k);
+                break;
+            }
+        }
+
+        if (estPremier) {
+            console.log(nombre + ' est premier');
+        }
+        /*
+        nombre EST PREMIER SI
+        il n'est divisible par 1 ou lui même
+        nombre N'EST PAS PREMIER SI
+        il est divible par un nombre compris entre 2 est lui même -1
+        */
+
+        //Exercice Eleves
+        let arrayEleves = [{
+            nom: 'Marc',
+            moyenne: 15
+        }, {
+            nom: 'Marion',
+            moyenne: 8
+        }, {
+            nom: 'Antoine',
+            moyenne: 4
+        }, {
+            nom: 'Jean',
+            moyenne: 14
+        }];
+
+        for (let l = 0; l <= arrayEleves.length; l++) {
+            let eleve = arrayEleves[l];
+            if (eleve.moyenne < 10) {
+                console.log(eleve.nom + ' n\'as pas la moyenne');
+            } else {
+                console.log(eleve.nom + ' a la moyenne');
+            }
+        }
+
+        /*
+        POUR CHAQUE eleve
+        SI moyenne < 10 ALORS
+            AFFICHER nom 'n'a pas la moyenne'
+        */
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
