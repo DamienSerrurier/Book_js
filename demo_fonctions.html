@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <script>
+        //Les fonctions
+
+        //test nombre premier
+
+        console.log(estPremier(22)); // Cette déclaration de fonction fonctionne même si elle est avant sa fonction 
+
+        function estPremier(nombre) {
+            for (k = 2; k < nombre; k++) {
+                if (nombre % k === 0) {
+                    return false;
+                }
+                return true;
+            }
+        }
+
+        /* 
+        On peut stocker la fonction dans une variable aussi
+        let estPremier = function (nombre) {
+            for (k = 2; k < nombre; k++) {
+                if (nombre % k === 0) {
+                    return false;
+                }
+                return true;
+            }
+        }
+        */
+
+        function multiplie(a, b) {
+            if (b === undefined) {
+                b = 1;
+            }
+            return a * b;
+        }
+
+        /*
+        nombre EST PREMIER SI
+        il n'est divisible par 1 ou lui même
+        nombre N'EST PAS PREMIER SI
+        il est divible par un nombre compris entre 2 est lui même -1
+        */
+
+        //Exercice Eleves
+        let classA = [{
+            nom: 'Marc',
+            moyenne: 15
+        }, {
+            nom: 'Marion',
+            moyenne: 8
+        }, {
+            nom: 'Antoine',
+            moyenne: 4
+        }, {
+            nom: 'Jean',
+            moyenne: 14
+        }];
+
+        let classB = [{
+            nom: 'Sébastien',
+            moyenne: 8
+        }, {
+            nom: 'Marine',
+            moyenne: 6
+        }, {
+            nom: 'Péfro',
+            moyenne: 14
+        }, {
+            nom: 'Violette',
+            moyenne: 14
+        }];
+
+        function afficheQuiALaMoyenne(eleves) {
+            for (let i = 0; i < eleves.length; i++) {
+                let eleve = eleves[i];
+                if (eleve.moyenne >= 10) {
+                    console.log(eleve.nom + ' a la moyenne');
+                }
+            }
+        }
+
+        afficheQuiALaMoyenne(classA);
+        afficheQuiALaMoyenne(classB);
+
+        /*
+        POUR CHAQUE eleve
+        SI moyenne < 10 ALORS
+            AFFICHER nom 'n'a pas la moyenne'
+        */
+
+        let aLaMoyenne = function (eleves) {
+            let moyennes = [];
+            for (let i = 0; i < eleves.length; i++) {
+                let eleve = eleves[i];
+                if (eleve.moyenne >= 10) {
+                    moyennes.push(eleve);
+                }
+            }
+            return moyennes;
+        }
+
+        console.log(aLaMoyenne(classA));
+
+        let pikachu = { //fonction contenu dans un objet
+            crier: function () {
+                console.log('PIKACHU');
+            }
+        }
+
+        pikachu.crier();
+
+        let phrase =
+            'Le premier point auquel il faut faire attention est le choix de la propiété à modifier pour un élément HTML';
+
+        let frequence = function (phrase) {
+            let mots = phrase.toLowerCase().split(' ');
+            let compteur = {};
+            for (let i = 0; i < mots.length; i++) {
+                let mot = mots[i];
+                if (compteur[mot] === undefined) {
+                    compteur[mot] = 1;
+                } else {
+                    compteur[mot]++;
+                }
+            }
+            return compteur;
+        }
+
+        /*
+        ON SEPARE notre phrase GRACE AUX ESPACES (split)
+        ON CREER un compteur
+        POUR CHAQUE mots
+            SI le mot est dans mon compteur (compteur[mot])
+                Je l'incrémente
+            SINON
+                Je lui assigne la valeur
+        AFFICHE compteur
+        */
+
+        let eleve1 = {
+            nom: 'Jean',
+            notes: [15, 16, 18, 2]
+        };
+
+        let eleve2 = {
+            nom: 'Marc',
+            notes: [5, 18, 20, 18]
+        };
+
+        let moyenne = function (notes) {
+            let somme = 0;
+            for (let i = 0; i < notes.length; i++) {
+                somme = somme + notes[i];
+            }
+            return somme / notes.length;
+        }
+
+        console.log(moyenne(eleve1.notes));
+
+        let estMeilleur = function (a, b) {
+            return moyenne(a.notes) > moyenne(b.notes);
+        }
+
+        console.log(estMeilleur(eleve1, eleve2));
+
+        // estMeilleur(eleve1, eleve2);
+        //Fonctions ou méthode de base utile en JavaScript 
+
+        //Méthode ou méthode de l'objet Math
+        console.log(Math.round(45.33)); //Arondi un nombre
+        console.log(Math.ceil(45.33)); //Arondi à la virgule supérieur
+        console.log(Math.random()); //Retour un nombre aléatoire entre 0 et 1
+
+        //Méthode sur l'objet string
+        console.log('Anna'.toUpperCase()); //permet de mettre une chaine de caractère en Majuscule
+        console.log('ANNA'.toLowerCase()); //permet de mettre une chaine de caractère en Minuscule
+        console.log('Anna '.repeat(5)); //permet de répéter une chaine de caractère un certain nombre défini de choix
+        let sentence = 'Salut les gens';
+        console.log(sentence.split(' ')); //permet de transformer une chaine de caractère en tableau par un point de coupure défini
+
+        //Méthode sur l'objet number
+        console.log(245.36.toString()); //permet de convertir un nombre en chaine de caractère
+        console.log(parseInt('1', 10)); //permet de transformer un nomnre qui est en chaine de caractère en entier(int)
+        console.log(parseFloat(
+            '45.63')); //permet de transformer un nomnre qui est en chaine de caractère en nombre à virgule(float)
+
+        //Méthode sur l'objet array
+        console.log(Array.isArray([2, 6])); //permet de savoir si la donnée est un tableau
+        console.log([5, 7, 9].toString()); //permet de convertir un tableau en chaine de caractère
+        console.log([5, 3].join('-')); //permet de remplacer la virgule en ce qui est passé en paramètre
+        a = [2, 7];
+        a.push(4);
+        console.log(a); // permet de rajouter une valeur dans un tableau
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
