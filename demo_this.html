@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <script>
+        let demo = function () {
+            console.log(this); //this fait référence à l'objet global
+        }
+
+        demo();
+
+        let eleve = {
+            nom: 'Jean',
+            present: function () {
+                let self = this; //this vaut la valeur de l'objet
+                let demo = {
+                    demo: function(){
+                        console.log(self.nom); 
+                    }
+                }
+                demo.demo();
+                console.log(self.nom + ' présent');
+            }
+        }
+
+        eleve.present();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
