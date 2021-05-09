@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <script>
+        let Eleve = function (nom, notes) {
+            if (notes != undefined) {
+                this.notes = notes;
+            }
+            this.nom = nom;
+        }
+
+        //Prototype
+        Eleve.prototype.moyenne = function () {
+            if (this.notes === undefined) {
+                return NaN;
+            }
+            let somme = 0;
+            for (let i = 0; i < this.notes.length; i++) {
+                somme += this.notes[i];
+            }
+            return somme / this.notes.length;
+        }
+
+        //Instances
+        let jean = new Eleve('Jean', [10, 15]);
+        let marc = new Eleve('Marc');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
