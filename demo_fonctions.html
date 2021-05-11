@@ -6,8 +6,12 @@
     <script>
         //Les fonctions
 
+        //Fonction autonome déclenchant une alert
+        (function () {
+            window.alert('Salut les gens');
+        })()
+        
         //test nombre premier
-
         console.log(estPremier(22)); // Cette déclaration de fonction fonctionne même si elle est avant sa fonction 
 
         function estPremier(nombre) {
@@ -180,7 +184,8 @@
         console.log('ANNA'.toLowerCase()); //permet de mettre une chaine de caractère en Minuscule
         console.log('Anna '.repeat(5)); //permet de répéter une chaine de caractère un certain nombre défini de choix
         let sentence = 'Salut les gens';
-        console.log(sentence.split(' ')); //permet de transformer une chaine de caractère en tableau par un point de coupure défini
+        console.log(sentence.split(
+        ' ')); //permet de transformer une chaine de caractère en tableau par un point de coupure défini
 
         //Méthode sur l'objet number
         console.log(245.36.toString()); //permet de convertir un nombre en chaine de caractère
