@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <script>
+        //Capture d'erreur permet au reste du code de s'exécuter
+        let a = {};
+
+        try { //capture de l'erreur
+            a.maMethode();
+        } catch (e) { //renvoie de l'erreur
+            console.log('J\'ai rencontré une erreur ' + e.stack); //stack renvoie l'origine de l'erreur
+        } finally { //permet d'exécuter du code quoi qu'il arrive
+            console.log('finally');
+        }
+
+        let demo = function (nombre) {
+            if (nombre > 5) {
+                throw new Error('Le nombre ne peut être supérieur à 5'); //trow renvoie une exeption
+            }
+            return nombre * 2;
+        }
+
+        try {
+            demo(6);
+        } catch (e) {
+            console.log('Le chiffre n\'est pas bon' + e);
+        }
+
+        try {
+            try {
+                throw new Error('error'); //pas de capture d'erreur
+            } finally {
+                console.log('finally'); //finally n'empêche pas le catch
+            }
+        } catch {
+            console.log('catch');
+        }
+
+        try {
+            try {
+                throw new Error('error');
+            } catch {
+                console.log('catch'); //seul ce catch sera exécuté
+            }
+        } catch {
+            console.log('catch');
+        }
+
+        try {
+            try {
+                throw new Error('error');
+            } catch {
+                console.log('catch'); //seul ce catch sera exécuté
+            } finally {
+                console.log('finally'); //le code de finally s'exécute quoi qu'il arrive
+            }
+        } catch {
+            console.log('catch');
+        } finally {
+            console.log('parent finally'); //le code de finally s'exécute quoi qu'il arrive
+        }
+
+        let double = function (nombre) {
+            let resultat = nombre * 2; //résultat est une variable local à la fonction (ceci est valable que pour la fonction, pas pour les autres blocs)
+            if (Number.isNaN(resultat)) {
+                throw new Error('Ceci n\'est pas un nombre');
+            }
+            return resultat;
+        }
+
+        try{
+            console.log(double('dftgtgt'));
+        }catch{
+            console.log('Impossible de multiplier dftgtgt par 2')
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
