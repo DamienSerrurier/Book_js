@@ -23,17 +23,14 @@
 // document.querySelector('ul').firstChild //permet de retourner le premier noeud enfant d'un élément parent
 // document.querySelector('ul').firstElementChild //permet de retourner le premier noeud élément enfant d'un élément parent
 // document.querySelector('ul').lastChild //permet de retourner le dernier noeud enfant d'un élément parent
-// document.querySelector('ul').lastChild //permet de retourner le dernier noeud enfant d'un élément parent
 // document.querySelector('ul').lastElementChild //permet de retourner le dernier noeud élément enfant d'un élément parent
 // document.querySelector('ul').getElementsByTagName('li') //permet de retourner les noeuds éléments enfants défini par getElementsByTagName d'un élément parent
-// document.querySelector('ul').querySelector('li:nth-child(3)') //permet de retourner un noeuds élément enfant défini par un sélecteur css avancé d'un élément parent
 // document.querySelector('ul').querySelector('li:nth-child(3)') //permet de retourner un noeuds élément enfant défini par un sélecteur css avancé d'un élément parent
 // document.querySelector('ul').querySelector('li:nth-child(3)').previousSibling //previousSibling permet de retourner un noeuds enfant précèdant un autre noeud de même niveau défini par un sélecteur css avancé d'un élément parent
 // document.querySelector('ul').querySelector('li:nth-child(3)').previousElementSibling //previousElementSibling permet de retourner un noeuds élément enfant précèdant un autre noeud de même niveau défini par un sélecteur css avancé d'un élément parent
 // document.querySelector('ul').querySelector('li:nth-child(3)').nextSibling //nextSibling permet de retourner un noeuds enfant suivant un autre noeud de même niveau défini par un sélecteur css avancé d'un élément parent
 // document.querySelector('ul').querySelector('li:nth-child(3)').nextElementSibling //nextElementSibling permet de retourner un noeuds élément enfant suivant un autre noeud de même niveau défini par un sélecteur css avancé d'un élément parent
 // document.querySelector('ul').querySelector('li:nth-child(3)').parentNode //parentNode permet de retourner un noeuds parent suivant un noeud enfant
-// document.querySelector('ul').querySelector('li:nth-child(3)').parentElement //parentElement permet de retourner un noeuds élément parent suivant un noeud enfant
 // document.querySelector('ul').querySelector('li:nth-child(3)').parentElement //parentElement permet de retourner un noeuds élément parent suivant un noeud enfant
 // document.querySelector('li').parentElement.removeChild(li); //removeChild permet de supprimer un élément enfant par rapport à son parent
 
