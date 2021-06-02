@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            color: #424242;
+            font-family: sans-serif;
+        }
+
+        .spoiler button {
+            background-color: #b9e937;
+            color: #424242;
+            border: 1px solid #00b996;
+            cursor: pointer;
+        }
+
+        .spoiler-content {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            opacity: 0;
+            overflow: hidden; /*overflow avec hidden permet de limiter l'affichage du contenu d'un élément par rapport à son bloc*/
+            transition: opacity 0.5s;
+        }
+
+        .spoiler-content.visible {
+            display: inline;
+            width: auto;
+            height: auto;
+            opacity: 1;
+        }
+    </style>
+    <title>Spoiler</title>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra, purus ut ornare eleifend, nibh tortor
+        faucibus odio, ut elementum est justo vel nulla. Pellentesque cursus vestibulum scelerisque. Praesent tellus
+        metus, egestas quis tempor in, dapibus ac nibh. Integer sem orci, vestibulum id lacus id, ornare posuere dui.
+        Sed vulputate ut massa bibendum consequat. In a feugiat sapien. Pellentesque porta hendrerit posuere. Sed
+        rhoncus orci eu felis tincidunt posuere. Etiam malesuada lectus sit amet egestas laoreet. Donec euismod vehicula
+        nulla vitae convallis. Curabitur tincidunt scelerisque lacinia. Aliquam quis iaculis nunc.
+    </p>
+
+    <p class="spoiler">
+        Monsieur x meurt à la fin.
+    </p>
+
+    <p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra, purus ut ornare eleifend, nibh
+            tortor.</span>
+        <span>Faucibus odio, <span class="spoiler">ut elementum est justo</span> vel nulla. Pellentesque cursus
+            vestibulum scelerisque. Praesent
+            tellus.</span>
+        <span>Metus, egestas quis tempor in, dapibus ac nibh. Integer sem orci, vestibulum id lacus id, ornare posuere
+            dui.</span>
+    </p>
+
+    <script src="js/spoiler.js"></script>
+</body>
+
+</html>
