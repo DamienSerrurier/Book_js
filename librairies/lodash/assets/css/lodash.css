@@ -1,0 +1,11 @@
+body {
+    font-family: sans-serif;
+}
+
+.title {
+    border: 1rem;
+    border-width: 0vmax;
+    background-color: rgb(61, 77, 77);
+    color: white;
+    padding: 1rem;
+}
