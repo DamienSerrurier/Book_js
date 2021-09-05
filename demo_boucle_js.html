@@ -26,17 +26,17 @@
         */
 
         //Boucle for (pour)
-        let eleves = ['Jean', 'Marc', 'Marion', 'Antoine'];
+        let arrayEleves = ['Jean', 'Marc', 'Marion', 'Antoine'];
 
-        for (j = 0; j < eleves.length; j++) { // length = longueur (longueur du tableau eleves)
-            let eleve = eleves[j];
+        for (j = 0; j < arrayEleves.length; j++) { // length = longueur (longueur du tableau eleves)
+            let eleve = arrayEleves[j];
             console.log('Bonjour ' + eleve);
         }
 
         /*
         //Boucle parcourant le tableau mais en sens inverse
-         for (t = eleves.length - 1; t >= 0; t--) {
-            let eleve = eleves[t];
+         for (t = arrayEleves.length - 1; t >= 0; t--) {
+            let eleve = arrayEleves[t];
             console.log('Bonjour ' + eleve);
         }
 
@@ -60,6 +60,7 @@
         if (estPremier) {
             console.log(nombre + ' est premier');
         }
+
         /*
         nombre EST PREMIER SI
         il n'est divisible par 1 ou lui même
@@ -67,8 +68,8 @@
         il est divible par un nombre compris entre 2 est lui même -1
         */
 
-        //Exercice Eleves
-        let arrayEleves = [{
+        //Boucle forEach spécialement pour parcourir un tableau
+        let children = [{
             nom: 'Marc',
             moyenne: 15
         }, {
@@ -82,20 +83,27 @@
             moyenne: 14
         }];
 
-        for (let l = 0; l <= arrayEleves.length; l++) {
-            let eleve = arrayEleves[l];
-            if (eleve.moyenne < 10) {
-                console.log(eleve.nom + ' n\'as pas la moyenne');
+        children.forEach(function (child) {
+            if (child.moyenne < 10) {
+                console.log(child.nom + ' n\'as pas la moyenne');
             } else {
-                console.log(eleve.nom + ' a la moyenne');
+                console.log(child.nom + ' a la moyenne');
             }
-        }
+        })
 
         /*
         POUR CHAQUE eleve
         SI moyenne < 10 ALORS
             AFFICHER nom 'n'a pas la moyenne'
         */
+
+        //Boucle forEach avec fonction fléché
+        children.forEach(child => {
+            console.log(child.nom);
+        })
+
+        //Boucle forEach avec fonction fléché avec paramètre le tout sur une seul ligne
+        children.forEach((child, index) => console.log(child.nom, index));
     </script>
 </head>
 
