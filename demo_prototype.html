@@ -26,7 +26,57 @@
 
         //Instances
         let jean = new Eleve('Jean', [10, 15]);
+        console.log(jean);
+        console.log(jean.moyenne());
         let marc = new Eleve('Marc');
+        console.log(marc);
+
+        //Classe
+        class Classe {
+            constructor(name = 'CM2', ...eleves) { //CM2 est en valeur par défaut ...variable
+                this.eleves = eleves;
+                this.nom = name;
+            }
+
+            afficherEleves() {
+                console.log('Les éléves de la classe ' + this.nom);
+                this.eleves.forEach(eleve => {
+                    console.log(eleve);
+                })
+            }
+        }
+
+        //Héritage de classe
+        class Classe2 extends Classe {
+
+            constructor(name = 'CM2', ...eleves) {
+                super(name, ...eleves);
+                this.nom = `de ${name}`; //``magic cote //${this.nom} = + this.nom
+            }
+
+            demo() {
+                console.log('demo');
+                this.afficherEleves();
+            }
+        }
+        //spread operator
+        let tabs = ['Thomas', 'Jean-Luc'];
+        let tabs2 = [...tabs, 'Josef', 'Marie']; //...variable fusion des deux tableaux
+        let tabs3 = 'hejdodf';
+
+        console.log(tabs2);
+
+        let c = new Classe('CM1', 'Jean', 'Marc', 'Paul');
+        let d = new Classe();
+        let e = new Classe('CP', ...tabs2);
+        let f = new Classe('', ...tabs3);
+        let g = new Classe2('CE2', ...tabs);
+
+        c.afficherEleves();
+        d.afficherEleves();
+        e.afficherEleves();
+        f.afficherEleves();
+        g.demo();
     </script>
 </head>
 
