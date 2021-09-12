@@ -1,4 +1,10 @@
+//La constante
+const textConst = 'Je ne varie pas'; //const syntaxe pour désigner une constante
+
 // Les variables
+var testGlobal = 'Salut'; //var syntaxe pour variable global
+
+let testLocal = 'Bonjour'; //let syntaxe pour variable local au sain d'un bloc comme une boucle ou une condition
 let integer = 25; // nombre entier
 let real = 2.5; // nombre réel positif ou négatif
 let string = 'Salut les gens'; // chaine de caractère
@@ -14,7 +20,11 @@ let eleves = ['Jean', 'John', 'Marion']; // tableau avec l'index commençant tou
 eleve[0] // donnera la valeur Jean
 eleve[1] // donnera la valeur John
 eleve[2] // donnera la valeur Marion
-let eleve = {nom: 'Marc', age: 12, moyenne: 15}; // objet avec des clés
+let eleve = {
+    nom: 'Marc',
+    age: 12,
+    moyenne: 15
+}; // objet avec des clés
 eleve.nom // donnera la valeur Marc 
 eleve.age // donnera la valeur 12
 eleve.moyenne // donnera la valeur 15
