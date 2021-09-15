@@ -44,7 +44,7 @@
 
         /*
         nombre EST PREMIER SI
-        il n'est divisible par 1 ou lui même
+        il n'est que divisible par 1 ou lui même
         nombre N'EST PAS PREMIER SI
         il est divible par un nombre compris entre 2 est lui même -1
         */
@@ -179,20 +179,22 @@
         console.log(Math.random()); //Retour un nombre aléatoire entre 0 et 1
 
         //Méthode sur l'objet string
-        console.log('Anna'.toUpperCase()); //permet de mettre une chaine de caractère en Majuscule
-        console.log('ANNA'.toLowerCase()); //permet de mettre une chaine de caractère en Minuscule
-        console.log('Anna '.repeat(5)); //permet de répéter une chaine de caractère un certain nombre défini de choix
+        console.log('Anna'.toUpperCase()); //permet de mettre une chaine de caractères en Majuscule
+        console.log('ANNA'.toLowerCase()); //permet de mettre une chaine de caractères en Minuscule
+        console.log('Anna '.repeat(5)); //permet de répéter une chaine de caractères un certain nombre défini de choix
         let sentence = 'Salut les gens';
-        console.log(sentence.split(' ')); //permet de transformer une chaine de caractère en tableau par un point de coupure défini
+        console.log(sentence.split(' ')); //permet de transformer une chaine de caractères en tableau par un point de coupure défini
+        let chaine = 'zdiozhhzdzeldaopkekfzkd';
+        console.log(chaine.includes('zelda')); //permet de vérifier si une chaine de caractèress existe dans une autre chaine de caractères, ça fonctionne aussi sur les tableaux
 
         //Méthode sur l'objet number
-        console.log(245.36.toString()); //permet de convertir un nombre en chaine de caractère
-        console.log(parseInt('1', 10)); //permet de transformer un nomnre qui est en chaine de caractère en entier(int)
-        console.log(parseFloat('45.63')); //permet de transformer un nomnre qui est en chaine de caractère en nombre à virgule(float)
+        console.log(245.36.toString()); //permet de convertir un nombre en chaine de caractères
+        console.log(parseInt('1', 10)); //permet de transformer un nomnre qui est en chaine de caractères en entier(int)
+        console.log(parseFloat('45.63')); //permet de transformer un nomnre qui est en chaine de caractères en nombre à virgule(float)
 
         //Méthode sur l'objet array
         console.log(Array.isArray([2, 6])); //permet de savoir si la donnée est un tableau
-        console.log([5, 7, 9].toString()); //permet de convertir un tableau en chaine de caractère
+        console.log([5, 7, 9].toString()); //permet de convertir un tableau en chaine de caractères
         console.log([5, 3].join('-')); //permet de remplacer la virgule en ce qui est passé en paramètre
         a = [2, 7];
         a.push(4);
