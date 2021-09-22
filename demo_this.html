@@ -15,8 +15,8 @@
             present: function () {
                 let self = this; //this vaut la valeur de l'objet
                 let demo = {
-                    demo: function(){
-                        console.log(self.nom); 
+                    demo: function () {
+                        console.log(self.nom);
                     }
                 }
                 demo.demo();
@@ -25,6 +25,54 @@
         }
 
         eleve.present();
+
+        //Boucle forEach avec fonction et avec this
+        let classe = {
+            eleves: ['Jean', 'Marc', 'francine'],
+            nom: 'CM2',
+            afficherEleves: function () {
+                let self = this;
+                this.eleves.forEach(function (eleve) {
+                    console.log(self.nom);
+                });
+            }
+        };
+
+        classe.afficherEleves();
+
+        //Boucle forEach avec fonction fléché et avec this
+        let panier = {
+            fruits: ['Orange', 'Raisin', 'Pomme'],
+            nom: 'Fruits',
+            afficherFruits: function () {
+                this.fruits.forEach((fruit) => {
+                    console.log(this.nom);
+                });
+            }
+        };
+
+        panier.afficherFruits();
+
+        let caisse = {
+            outils: ['clefAnglaise', 'pince', 'couteauDénudé'],
+            nom: 'Outils',
+            afficherOutils: function () { //syntax alternative afficherOutils ()
+                this.outils.forEach((outil) => {
+                    console.log(this.nom);
+                });
+            }
+        };
+
+        //Fonction simple
+        console.log(caisse.outils.map(function (
+        outil) { //map permet de créer un nouveau tableau avec des données définis
+            return 'un(e) ' + outil;
+        }))
+
+        //fonction fléché sur une seul ligne
+        console.log(caisse.outils.map(outil => 'un(e) ' + outil));
+
+        caisse.afficherOutils();
     </script>
 </head>
 
